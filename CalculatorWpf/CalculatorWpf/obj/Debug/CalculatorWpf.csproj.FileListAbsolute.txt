@@ -1,0 +1,15 @@
+C:\Users\naris\Documents\Work\TECHHIRE\REPOSITORY\C-Sharp-WinForms\CalculatorWpf\CalculatorWpf\bin\Debug\CalculatorWpf.exe.config
+C:\Users\naris\Documents\Work\TECHHIRE\REPOSITORY\C-Sharp-WinForms\CalculatorWpf\CalculatorWpf\bin\Debug\CalculatorWpf.exe
+C:\Users\naris\Documents\Work\TECHHIRE\REPOSITORY\C-Sharp-WinForms\CalculatorWpf\CalculatorWpf\bin\Debug\CalculatorWpf.pdb
+C:\Users\naris\Documents\Work\TECHHIRE\REPOSITORY\C-Sharp-WinForms\CalculatorWpf\CalculatorWpf\obj\Debug\CalculatorWpf.csprojAssemblyReference.cache
+C:\Users\naris\Documents\Work\TECHHIRE\REPOSITORY\C-Sharp-WinForms\CalculatorWpf\CalculatorWpf\obj\Debug\MainWindow.g.cs
+C:\Users\naris\Documents\Work\TECHHIRE\REPOSITORY\C-Sharp-WinForms\CalculatorWpf\CalculatorWpf\obj\Debug\App.g.cs
+C:\Users\naris\Documents\Work\TECHHIRE\REPOSITORY\C-Sharp-WinForms\CalculatorWpf\CalculatorWpf\obj\Debug\CalculatorWpf_MarkupCompile.cache
+C:\Users\naris\Documents\Work\TECHHIRE\REPOSITORY\C-Sharp-WinForms\CalculatorWpf\CalculatorWpf\obj\Debug\CalculatorWpf_MarkupCompile.lref
+C:\Users\naris\Documents\Work\TECHHIRE\REPOSITORY\C-Sharp-WinForms\CalculatorWpf\CalculatorWpf\obj\Debug\MainWindow.baml
+C:\Users\naris\Documents\Work\TECHHIRE\REPOSITORY\C-Sharp-WinForms\CalculatorWpf\CalculatorWpf\obj\Debug\CalculatorWpf.g.resources
+C:\Users\naris\Documents\Work\TECHHIRE\REPOSITORY\C-Sharp-WinForms\CalculatorWpf\CalculatorWpf\obj\Debug\CalculatorWpf.Properties.Resources.resources
+C:\Users\naris\Documents\Work\TECHHIRE\REPOSITORY\C-Sharp-WinForms\CalculatorWpf\CalculatorWpf\obj\Debug\CalculatorWpf.csproj.GenerateResource.cache
+C:\Users\naris\Documents\Work\TECHHIRE\REPOSITORY\C-Sharp-WinForms\CalculatorWpf\CalculatorWpf\obj\Debug\CalculatorWpf.csproj.CoreCompileInputs.cache
+C:\Users\naris\Documents\Work\TECHHIRE\REPOSITORY\C-Sharp-WinForms\CalculatorWpf\CalculatorWpf\obj\Debug\CalculatorWpf.exe
+C:\Users\naris\Documents\Work\TECHHIRE\REPOSITORY\C-Sharp-WinForms\CalculatorWpf\CalculatorWpf\obj\Debug\CalculatorWpf.pdb
