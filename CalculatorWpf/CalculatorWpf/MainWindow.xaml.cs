@@ -9,8 +9,8 @@ namespace CalculatorWpf
     /// </summary>
     public partial class MainWindow
     {
-        private double _num1;
-        private double _num2;
+        private long _num1;
+        private long _num2;
         private string _operation = "";
 
         public MainWindow()
@@ -122,7 +122,12 @@ namespace CalculatorWpf
                 case Key.Divide:
                     ValidateOperation("/");
                     break;
-                default:
+                case Key.Enter:
+                    PerformOperation();
+                    break;
+                //typing
+                case Key.Back: //todo not working
+                    DeleteLastDigit();
                     break;
             }
         }
@@ -146,6 +151,39 @@ namespace CalculatorWpf
         private void BtnDivideBy_OnClick(object sender, RoutedEventArgs e)
         {
             ValidateOperation("/");
+        }
+
+        private void BtnEqual_OnClick(object sender, RoutedEventArgs e)
+        {
+            PerformOperation();
+        }
+
+        /*TYPING EVENT HANDLERS*/
+        private void BtnClearEntry_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(_operation))
+            {
+                _num1 = 0;
+            }
+            else
+            {
+                _num2 = 0;
+            }
+
+            TextDisplay.Text = "0";
+        }
+
+        private void BtnClear_OnClick(object sender, RoutedEventArgs e)
+        {
+            _num1 = 0;
+            _num2 = 0;
+            _operation = "";
+            TextDisplay.Text = "0";
+        }
+
+        private void BtnBackspace_OnClick(object sender, RoutedEventArgs e)
+        {
+            DeleteLastDigit();
         }
 
         /*HELPERS*/
@@ -187,11 +225,48 @@ namespace CalculatorWpf
                 case "*":
                     _operation = "*";
                     break;
-                default:
-                    break;
             }
 
             TextDisplay.Text = "0";
+        }
+
+        /// <summary>
+        /// Perform the operation and display result to text box
+        /// </summary>
+        private void PerformOperation()
+        {
+            switch (_operation)
+            {
+                case "+":
+                    TextDisplay.Text = (_num1 + _num2).ToString(CultureInfo.InvariantCulture);
+                    break;
+                case "-":
+                    TextDisplay.Text = (_num1 - _num2).ToString(CultureInfo.InvariantCulture);
+                    break;
+                case "*":
+                    TextDisplay.Text = (_num1 * _num2).ToString(CultureInfo.InvariantCulture);
+                    break;
+                case "/":
+                    TextDisplay.Text = (_num1 / _num2).ToString(CultureInfo.InvariantCulture);
+                    break;
+            }
+        }
+        
+        /// <summary>
+        /// Erase the last digit from display
+        /// </summary>
+        private void DeleteLastDigit()
+        {
+            if (string.IsNullOrEmpty(_operation))
+            {
+                _num1 /= 10; //we want truncation here
+                TextDisplay.Text = _num1.ToString(CultureInfo.InvariantCulture);
+            }
+            else
+            {
+                _num2 /= 10;
+                TextDisplay.Text = _num2.ToString(CultureInfo.InvariantCulture);
+            }
         }
     }
 }
