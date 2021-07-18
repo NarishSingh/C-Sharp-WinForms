@@ -39,7 +39,7 @@
         <Button x:Name="Btn3" Grid.Row="4" Grid.Column="2" Click="Btn3_OnClick">3</Button>
         <Button x:Name="Btn0" Grid.Row="5" Grid.Column="0" Click="Btn0_OnClick">0</Button>
         
-        <Button x:Name="BtnNeg" Grid.Row="5" Grid.Column="1">+/-</Button>
+        <Button x:Name="BtnNeg" Grid.Row="5" Grid.Column="1" Click="BtnNeg_OnClick">+/-</Button>
         <!-- <Button x:Name="BtnDot" Grid.Row="5" Grid.Column="2">.</Button> -->
         
         <!--Operations-->

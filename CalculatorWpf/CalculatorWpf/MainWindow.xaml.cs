@@ -185,6 +185,20 @@ namespace CalculatorWpf
         {
             DeleteLastDigit();
         }
+        
+        private void BtnNeg_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(_operation))
+            {
+                _num1 *= -1;
+                TextDisplay.Text = _num1.ToString(CultureInfo.InvariantCulture);
+            }
+            else
+            {
+                _num2 *= -1;
+                TextDisplay.Text = _num2.ToString(CultureInfo.InvariantCulture);
+            }
+        }
 
         /*HELPERS*/
         /// <summary>
