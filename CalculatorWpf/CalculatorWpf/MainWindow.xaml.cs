@@ -9,8 +9,8 @@ namespace CalculatorWpf
     /// </summary>
     public partial class MainWindow
     {
-        private double _num1 = 0;
-        private double _num2 = 0;
+        private double _num1;
+        private double _num2;
         private string _operation = "";
 
         public MainWindow()
@@ -69,7 +69,12 @@ namespace CalculatorWpf
             ValidateNum(0);
         }
 
-        private void NumPadKeyPress(object sender, KeyEventArgs e)
+        /// <summary>
+        /// KeyDown event handler for numpad presses
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TextDisplay_KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.Key)
             {
@@ -102,6 +107,8 @@ namespace CalculatorWpf
                     break;
                 case Key.NumPad9:
                     ValidateNum(9);
+                    break;
+                default:
                     break;
             }
         }

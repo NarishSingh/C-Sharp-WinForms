@@ -25,7 +25,7 @@
         
         <!--Display-->
         <TextBox x:Name="TextDisplay" Grid.ColumnSpan="4" IsReadOnly="True" TextAlignment="Right" 
-                 VerticalAlignment="Center" FontSize="30" KeyDown="NumPadKeyPress">0</TextBox>
+                 VerticalAlignment="Center" FontSize="30" KeyDown="TextDisplay_KeyDown">0</TextBox>
         
         <!--Number Keys-->
         <Button x:Name="Btn7" Grid.Row="2" Grid.Column="0" Click="Btn7_OnClick">7</Button>
