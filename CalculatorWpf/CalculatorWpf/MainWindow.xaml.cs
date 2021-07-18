@@ -78,6 +78,7 @@ namespace CalculatorWpf
         {
             switch (e.Key)
             {
+                //numpad
                 case Key.NumPad0:
                     ValidateNum(0);
                     break;
@@ -108,13 +109,48 @@ namespace CalculatorWpf
                 case Key.NumPad9:
                     ValidateNum(9);
                     break;
+                //operations
+                case Key.Add:
+                    ValidateOperation("+");
+                    break;
+                case Key.Subtract:
+                    ValidateOperation("-");
+                    break;
+                case Key.Multiply:
+                    ValidateOperation("*");
+                    break;
+                case Key.Divide:
+                    ValidateOperation("/");
+                    break;
                 default:
                     break;
             }
         }
-        
+
+        /*OPERATION EVENT HANDLERS*/
+        private void BtnPlus_OnClick(object sender, RoutedEventArgs e)
+        {
+            ValidateOperation("+");
+        }
+
+        private void BtnMinus_OnClick(object sender, RoutedEventArgs e)
+        {
+            ValidateOperation("-");
+        }
+
+        private void BtnTimes_OnClick(object sender, RoutedEventArgs e)
+        {
+            ValidateOperation("*");
+        }
+
+        private void BtnDivideBy_OnClick(object sender, RoutedEventArgs e)
+        {
+            ValidateOperation("/");
+        }
+
+        /*HELPERS*/
         /// <summary>
-        /// Validate btn press and change display based on input
+        /// Validate digit click and change display based on input
         /// </summary>
         /// <param name="num">digit to validate</param>
         private void ValidateNum(int num)
@@ -129,6 +165,33 @@ namespace CalculatorWpf
                 _num2 = _num2 * 10 + num;
                 TextDisplay.Text = _num2.ToString(CultureInfo.InvariantCulture);
             }
+        }
+
+        /// <summary>
+        /// Validate and store operation and reset display for 2nd number
+        /// </summary>
+        /// <param name="operation">operation to perform</param>
+        private void ValidateOperation(string operation)
+        {
+            switch (operation)
+            {
+                case "+":
+                    _operation = "+";
+                    break;
+                case "-":
+                    _operation = "-";
+                    break;
+                case "/":
+                    _operation = "/";
+                    break;
+                case "*":
+                    _operation = "*";
+                    break;
+                default:
+                    break;
+            }
+
+            TextDisplay.Text = "0";
         }
     }
 }
