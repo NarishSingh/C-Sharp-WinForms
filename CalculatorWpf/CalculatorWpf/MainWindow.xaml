@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="Calculator" Height="430" Width="280">
     <Grid>
+        <!--Grid definition-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition />
@@ -28,16 +29,16 @@
                  VerticalAlignment="Center" FontSize="30" KeyDown="TextDisplay_KeyDown">0</TextBox>
         
         <!--Number Keys-->
-        <Button x:Name="Btn7" Grid.Row="2" Grid.Column="0" Click="Btn7_OnClick">7</Button>
-        <Button x:Name="Btn8" Grid.Row="2" Grid.Column="1" Click="Btn8_OnClick">8</Button>
-        <Button x:Name="Btn9" Grid.Row="2" Grid.Column="2" Click="Btn9_OnClick">9</Button>
-        <Button x:Name="Btn4" Grid.Row="3" Grid.Column="0" Click="Btn4_OnClick">4</Button>
-        <Button x:Name="Btn5" Grid.Row="3" Grid.Column="1" Click="Btn5_OnClick">5</Button>
-        <Button x:Name="Btn6" Grid.Row="3" Grid.Column="2" Click="Btn6_OnClick">6</Button>
-        <Button x:Name="Btn1" Grid.Row="4" Grid.Column="0" Click="Btn1_OnClick">1</Button>
-        <Button x:Name="Btn2" Grid.Row="4" Grid.Column="1" Click="Btn2_OnClick">2</Button>
-        <Button x:Name="Btn3" Grid.Row="4" Grid.Column="2" Click="Btn3_OnClick">3</Button>
-        <Button x:Name="Btn0" Grid.Row="5" Grid.Column="0" Click="Btn0_OnClick">0</Button>
+        <Button x:Name="Btn7" Grid.Row="2" Grid.Column="0" Click="NumPad_OnClick" Tag="7">7</Button>
+        <Button x:Name="Btn8" Grid.Row="2" Grid.Column="1" Click="NumPad_OnClick" Tag="8">8</Button>
+        <Button x:Name="Btn9" Grid.Row="2" Grid.Column="2" Click="NumPad_OnClick" Tag="9">9</Button>
+        <Button x:Name="Btn4" Grid.Row="3" Grid.Column="0" Click="NumPad_OnClick" Tag="4">4</Button>
+        <Button x:Name="Btn5" Grid.Row="3" Grid.Column="1" Click="NumPad_OnClick" Tag="5">5</Button>
+        <Button x:Name="Btn6" Grid.Row="3" Grid.Column="2" Click="NumPad_OnClick" Tag="6">6</Button>
+        <Button x:Name="Btn1" Grid.Row="4" Grid.Column="0" Click="NumPad_OnClick" Tag="1">1</Button>
+        <Button x:Name="Btn2" Grid.Row="4" Grid.Column="1" Click="NumPad_OnClick" Tag="2">2</Button>
+        <Button x:Name="Btn3" Grid.Row="4" Grid.Column="2" Click="NumPad_OnClick" Tag="3">3</Button>
+        <Button x:Name="Btn0" Grid.Row="5" Grid.Column="0" Click="NumPad_OnClick" Tag="0">0</Button>
         
         <Button x:Name="BtnNeg" Grid.Row="5" Grid.Column="1" Click="BtnNeg_OnClick">+/-</Button>
         <!-- <Button x:Name="BtnDot" Grid.Row="5" Grid.Column="2">.</Button> -->

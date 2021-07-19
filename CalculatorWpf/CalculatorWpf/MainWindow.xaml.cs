@@ -1,5 +1,6 @@
 ﻿using System.Globalization;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace CalculatorWpf
@@ -19,60 +20,23 @@ namespace CalculatorWpf
         }
 
         /*NUM PAD EVENT HANDLERS*/
-        private void Btn7_OnClick(object sender, RoutedEventArgs e)
+        //Click
+        /// <summary>
+        /// Click event handler for numpad
+        /// </summary>
+        /// <param name="sender">Button</param>
+        /// <param name="e"></param>
+        private void NumPad_OnClick(object sender, RoutedEventArgs e)
         {
-            ValidateNum(7);
+            Button btn = (Button) sender; 
+            ValidateNum(int.Parse(btn.Tag.ToString()));
         }
-
-        private void Btn8_OnClick(object sender, RoutedEventArgs e)
-        {
-            ValidateNum(8);
-        }
-
-        private void Btn9_OnClick(object sender, RoutedEventArgs e)
-        {
-            ValidateNum(9);
-        }
-
-        private void Btn4_OnClick(object sender, RoutedEventArgs e)
-        {
-            ValidateNum(4);
-        }
-
-        private void Btn5_OnClick(object sender, RoutedEventArgs e)
-        {
-            ValidateNum(5);
-        }
-
-        private void Btn6_OnClick(object sender, RoutedEventArgs e)
-        {
-            ValidateNum(6);
-        }
-
-        private void Btn1_OnClick(object sender, RoutedEventArgs e)
-        {
-            ValidateNum(1);
-        }
-
-        private void Btn2_OnClick(object sender, RoutedEventArgs e)
-        {
-            ValidateNum(2);
-        }
-
-        private void Btn3_OnClick(object sender, RoutedEventArgs e)
-        {
-            ValidateNum(3);
-        }
-
-        private void Btn0_OnClick(object sender, RoutedEventArgs e)
-        {
-            ValidateNum(0);
-        }
-
+        
+        //KeyDown
         /// <summary>
         /// KeyDown event handler for numpad presses
         /// </summary>
-        /// <param name="sender"></param>
+        /// <param name="sender">Key</param>
         /// <param name="e"></param>
         private void TextDisplay_KeyDown(object sender, KeyEventArgs e)
         {
@@ -158,17 +122,11 @@ namespace CalculatorWpf
             PerformOperation();
         }
 
-        /*TYPING EVENT HANDLERS*/
+        /*TYPING RELATED BTN EVENT HANDLERS*/
         private void BtnClearEntry_OnClick(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrEmpty(_operation))
-            {
-                _num1 = 0;
-            }
-            else
-            {
-                _num2 = 0;
-            }
+            if (string.IsNullOrEmpty(_operation)) _num1 = 0;
+            else _num2 = 0;
 
             TextDisplay.Text = "0";
         }
@@ -185,7 +143,7 @@ namespace CalculatorWpf
         {
             DeleteLastDigit();
         }
-        
+
         private void BtnNeg_OnClick(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrEmpty(_operation))
@@ -265,7 +223,7 @@ namespace CalculatorWpf
                     break;
             }
         }
-        
+
         /// <summary>
         /// Erase the last digit from display
         /// </summary>
