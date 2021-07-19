@@ -45,10 +45,10 @@
         
         <!--Operations-->
         <Button x:Name="BtnEqual" Grid.Row="1" Grid.Column="3" Click="BtnEqual_OnClick">=</Button>
-        <Button x:Name="BtnPlus" Grid.Row="2" Grid.Column="3" Click="BtnPlus_OnClick">+</Button>
-        <Button x:Name="BtnMinus" Grid.Row="3" Grid.Column="3" Click="BtnMinus_OnClick">-</Button>
-        <Button x:Name="BtnTimes" Grid.Row="4" Grid.Column="3" Click="BtnTimes_OnClick">*</Button>
-        <Button x:Name="BtnDivideBy" Grid.Row="5" Grid.Column="3" Click="BtnDivideBy_OnClick">/</Button>
+        <Button x:Name="BtnPlus" Grid.Row="2" Grid.Column="3" Click="Operation_OnClick" Tag="+">+</Button>
+        <Button x:Name="BtnMinus" Grid.Row="3" Grid.Column="3" Click="Operation_OnClick" Tag="-">-</Button>
+        <Button x:Name="BtnTimes" Grid.Row="4" Grid.Column="3" Click="Operation_OnClick" Tag="*">*</Button>
+        <Button x:Name="BtnDivideBy" Grid.Row="5" Grid.Column="3" Click="Operation_OnClick" Tag="/">/</Button>
         
         <!--Typing Related-->
         <Button x:Name="BtnClearEntry" Grid.Row="1" Grid.Column="0" Click="BtnClearEntry_OnClick">CE</Button>
