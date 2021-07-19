@@ -20,7 +20,6 @@ namespace CalculatorWpf
         }
 
         /*NUM PAD EVENT HANDLERS*/
-        //Click
         /// <summary>
         /// Click event handler for numpad
         /// </summary>
@@ -51,7 +50,66 @@ namespace CalculatorWpf
             }
         }
 
-        //KeyDown
+        /*OPERATION EVENT HANDLER*/
+        /// <summary>
+        /// Click event handler for math operations
+        /// </summary>
+        /// <param name="sender">Button</param>
+        /// <param name="e">Args from click event</param>
+        private void Operation_OnClick(object sender, RoutedEventArgs e)
+        {
+            Button btn = (Button) sender;
+            ValidateOperation(btn.Tag.ToString());
+        }
+
+        /// <summary>
+        /// Click event handler for =, performs the operation stored
+        /// </summary>
+        /// <param name="sender">Button</param>
+        /// <param name="e">Args from click event</param>
+        private void BtnEqual_OnClick(object sender, RoutedEventArgs e)
+        {
+            PerformOperation();
+        }
+
+        /*TYPING RELATED BTN EVENT HANDLERS*/
+        /// <summary>
+        /// Click event handler for CE, clears the current num
+        /// </summary>
+        /// <param name="sender">Button</param>
+        /// <param name="e">Args from click event</param>
+        private void BtnClearEntry_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(_operation)) _num1 = 0;
+            else _num2 = 0;
+
+            TextDisplay.Text = "0";
+        }
+
+        /// <summary>
+        /// Click event handler for C, resets the entire operation
+        /// </summary>
+        /// <param name="sender">Button</param>
+        /// <param name="e">Args from click event</param>
+        private void BtnClear_OnClick(object sender, RoutedEventArgs e)
+        {
+            _num1 = 0;
+            _num2 = 0;
+            _operation = "";
+            TextDisplay.Text = "0";
+        }
+
+        /// <summary>
+        /// Click event handler for backspace, deletes the last digit
+        /// </summary>
+        /// <param name="sender">Button</param>
+        /// <param name="e">Args from click event</param>
+        private void BtnBackspace_OnClick(object sender, RoutedEventArgs e)
+        {
+            DeleteLastDigit();
+        }
+
+        /*KEYDOWN EVENT HANDLER*/
         /// <summary>
         /// KeyDown event handler for numpad presses
         /// </summary>
@@ -113,65 +171,6 @@ namespace CalculatorWpf
                     DeleteLastDigit();
                     break;
             }
-        }
-
-        /*OPERATION EVENT HANDLER*/
-        /// <summary>
-        /// Click event handler for math operations
-        /// </summary>
-        /// <param name="sender">Button</param>
-        /// <param name="e">Args from click event</param>
-        private void Operation_OnClick(object sender, RoutedEventArgs e)
-        {
-            Button btn = (Button) sender;
-            ValidateOperation(btn.Tag.ToString());
-        }
-
-        /// <summary>
-        /// Click event handler for =, performs the operation stored
-        /// </summary>
-        /// <param name="sender">Button</param>
-        /// <param name="e">Args from click event</param>
-        private void BtnEqual_OnClick(object sender, RoutedEventArgs e)
-        {
-            PerformOperation();
-        }
-
-        /*TYPING RELATED BTN EVENT HANDLERS*/
-        /// <summary>
-        /// Click event handler for CE, clears the current num
-        /// </summary>
-        /// <param name="sender">Button</param>
-        /// <param name="e">Args from click event</param>
-        private void BtnClearEntry_OnClick(object sender, RoutedEventArgs e)
-        {
-            if (string.IsNullOrEmpty(_operation)) _num1 = 0;
-            else _num2 = 0;
-
-            TextDisplay.Text = "0";
-        }
-
-        /// <summary>
-        /// Click event handler for C, resets the entire operation
-        /// </summary>
-        /// <param name="sender">Button</param>
-        /// <param name="e">Args from click event</param>
-        private void BtnClear_OnClick(object sender, RoutedEventArgs e)
-        {
-            _num1 = 0;
-            _num2 = 0;
-            _operation = "";
-            TextDisplay.Text = "0";
-        }
-
-        /// <summary>
-        /// Click event handler for backspace, deletes the last digit
-        /// </summary>
-        /// <param name="sender">Button</param>
-        /// <param name="e">Args from click event</param>
-        private void BtnBackspace_OnClick(object sender, RoutedEventArgs e)
-        {
-            DeleteLastDigit();
         }
 
         /*HELPERS*/
@@ -238,7 +237,7 @@ namespace CalculatorWpf
                     TextDisplay.Text = (_num1 / _num2).ToString(CultureInfo.InvariantCulture);
                     break;
             }
-            
+
             //clear operation
             _num1 = 0;
             _num2 = 0;
