@@ -1,0 +1,15 @@
+C:\Users\naris\Documents\Work\TECHHIRE\REPOSITORY\C-Sharp-WinForms\ThreadingInWpf\ThreadingInWpf\bin\Debug\ThreadingInWpf.exe.config
+C:\Users\naris\Documents\Work\TECHHIRE\REPOSITORY\C-Sharp-WinForms\ThreadingInWpf\ThreadingInWpf\bin\Debug\ThreadingInWpf.exe
+C:\Users\naris\Documents\Work\TECHHIRE\REPOSITORY\C-Sharp-WinForms\ThreadingInWpf\ThreadingInWpf\bin\Debug\ThreadingInWpf.pdb
+C:\Users\naris\Documents\Work\TECHHIRE\REPOSITORY\C-Sharp-WinForms\ThreadingInWpf\ThreadingInWpf\obj\Debug\ThreadingInWpf.csprojAssemblyReference.cache
+C:\Users\naris\Documents\Work\TECHHIRE\REPOSITORY\C-Sharp-WinForms\ThreadingInWpf\ThreadingInWpf\obj\Debug\MainWindow.g.cs
+C:\Users\naris\Documents\Work\TECHHIRE\REPOSITORY\C-Sharp-WinForms\ThreadingInWpf\ThreadingInWpf\obj\Debug\App.g.cs
+C:\Users\naris\Documents\Work\TECHHIRE\REPOSITORY\C-Sharp-WinForms\ThreadingInWpf\ThreadingInWpf\obj\Debug\ThreadingInWpf_MarkupCompile.cache
+C:\Users\naris\Documents\Work\TECHHIRE\REPOSITORY\C-Sharp-WinForms\ThreadingInWpf\ThreadingInWpf\obj\Debug\ThreadingInWpf_MarkupCompile.lref
+C:\Users\naris\Documents\Work\TECHHIRE\REPOSITORY\C-Sharp-WinForms\ThreadingInWpf\ThreadingInWpf\obj\Debug\MainWindow.baml
+C:\Users\naris\Documents\Work\TECHHIRE\REPOSITORY\C-Sharp-WinForms\ThreadingInWpf\ThreadingInWpf\obj\Debug\ThreadingInWpf.g.resources
+C:\Users\naris\Documents\Work\TECHHIRE\REPOSITORY\C-Sharp-WinForms\ThreadingInWpf\ThreadingInWpf\obj\Debug\ThreadingInWpf.Properties.Resources.resources
+C:\Users\naris\Documents\Work\TECHHIRE\REPOSITORY\C-Sharp-WinForms\ThreadingInWpf\ThreadingInWpf\obj\Debug\ThreadingInWpf.csproj.GenerateResource.cache
+C:\Users\naris\Documents\Work\TECHHIRE\REPOSITORY\C-Sharp-WinForms\ThreadingInWpf\ThreadingInWpf\obj\Debug\ThreadingInWpf.csproj.CoreCompileInputs.cache
+C:\Users\naris\Documents\Work\TECHHIRE\REPOSITORY\C-Sharp-WinForms\ThreadingInWpf\ThreadingInWpf\obj\Debug\ThreadingInWpf.exe
+C:\Users\naris\Documents\Work\TECHHIRE\REPOSITORY\C-Sharp-WinForms\ThreadingInWpf\ThreadingInWpf\obj\Debug\ThreadingInWpf.pdb
